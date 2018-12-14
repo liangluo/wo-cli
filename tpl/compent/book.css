@@ -1,0 +1,159 @@
+.mod-book{
+    padding:0 .3rem;
+    margin-top:.56rem;
+}
+.list{
+    display:flex;
+    margin-bottom:.64rem;
+}
+.list>div{
+    display:flex;
+    width:100%;
+}
+
+.mod-book-img{
+    display:flex;
+    margin-right: .3rem;
+    position: relative;
+}
+.mod-book-img img{
+    -webkit-box-shadow:0 .05rem .1rem rgba(197, 197, 197, 0.35);
+    box-shadow: 0 .05rem .1rem rgba(197, 197, 197, 0.35);  
+}
+.mod-book-img img[lazy=loading] {
+    background:url(../img/loading.gif) center center no-repeat;
+     margin: auto;
+     background-size: contain;
+}
+.mod-book-img img[lazy=error] {
+    background:url(../img/icon-vdefault.png) center center no-repeat;
+     margin: auto;
+     background-size: contain;
+}
+.mod-book-detail{
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    flex:1 0;
+}
+.mod-book-detail .mod-book-title{
+    font-size: .36rem;
+    font-weight: bolder;
+    color:#333;
+    margin-bottom: .22rem;
+    width:4.9rem;
+    line-height: 1;
+}
+.mod-book-detail .mod-book-intr{
+    font-size:.3rem;
+    color:#999;
+    line-height:.45rem;
+}
+.mod-book-bottom{
+    display:flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    color:#999;
+    font-size: .24rem;
+    line-height: 1;
+}
+.mod-book-author{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+.mod-book-author .author-label{
+    width: .24rem;
+	height:.24rem;
+	text-align: center;
+	background: url(../img/icon-author.png) center center no-repeat;
+	background-size:cover;
+	font-size: 0;
+	margin-right: .16rem;
+	border-radius: 50%;
+}
+.author-name{
+    display:inline-block;
+    width:1.3rem;
+    line-height: 1;
+}
+.mod-book-detail .label-push{
+	padding: .04rem .08rem;
+	border:1px solid rgba(153,153,153,1);
+	border-radius:2px;
+}
+.mod-book-detail .label-numb{
+	padding: .04rem .08rem;
+	border:1px solid rgba(102,102,102,1);
+	border-radius:2px;
+	color:#666;
+}
+.icon-label {
+	width: .53rem;
+	height: .47rem;
+	line-height: .4rem;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: .1rem;
+	font-size: .24rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADUAAAAvCAYAAABDq4KNAAACxElEQVRoQ+2aQWsTQRTH/29jjQdBUejBioKeJFQqacGDHkSwUJJiv5Gfx2AEk6ohIUrpxQ8geFKEguChINQ0O7O7T2d2J9nUtHU0ZhKZQJhk92Xe+73/f98esrS3tc74z17koeZEUa/UnAgFr5RXymEHvP0cNt8qtVfKql0Og71SDptvldorZdUuh8FeKYfNt0rtlbJql8Ngr5TD5lul9kpZtcthsFfKYfOtUnulrNrlMNgr5bD5Vqm9UlbtmmIwM0NGMUIp9XtulUqYUwghEUYSSTL8m22uoKI4Rl9BaEWiY70w01DKViJKQfpCQMbJqaYmYPbsp2yVQkgcCmUrBaJKVfY6eWV9fkagojjBYaggBPoiAmuAlIOJQNmRtGRddgY5/rsT+6mShYzQCwV6odQWGwiRwZhymQDKi5RnyguX+93UoJStlBq9vsT3UCDOTavxF0pKYngG0mUWG0BnuuX3+KdQauoSuAtCW0jZ/bLfuyWi5CEIWwxcNrYyzR8pNKNJlzRSraPX1qjAxpoTh2LGJwA1CrCzVG+9IuCXkcUAdVdX14IAmwyqMPNtdcyIoOymbDdwmjqZ8Zjj+pyKUysBrDdIZftrKAbLgKnLxK2AovqVevfzqXP3SEC7XL5GASoMqoL5AYOKR8eBGRJ5O+afaslr+KdQXwFsM2O7uBC2FmtvD2xBjot/Uyqd7xeLj4ioSowNEBbT4rNxnRlxOPeGU8TE/TYUA++J+QUoaCw9f/1unK0mBWb2eQIEqysrdxeoUEkC2gRzSZ/THmS9aM+y+jwc8ydBCTB2iLgRBUnz+rPOx0kXbbtfc3ntBhWSqlKRwfcBnDW3tMFeY66pfYBfgqkRHsStm53ON9vE04pvl8sXRMTqabEqQBsALpl7Gu09Xv/ARA0gbl49c3GXarV4WoVNKs9ToHBu+c49CoIqfkL+AKpqlbIExR9+AAAAAElFTkSuQmCC');
+	background-size:cover;
+}
+/* 一图 */
+.mod-book-one{
+    display:flex;
+    flex-direction: column;
+}
+.mod-book-one .list{
+    width:100%; 
+}
+.mod-book-one .mod-book-img{
+    width:1.5rem;
+    height: 2rem;
+}
+.mod-book-one .mod-book-img img{
+    width:1.5rem;
+}
+
+/* 三书 */
+.mod-book-three{
+    display:flex;
+    flex-wrap: wrap;
+}
+.mod-book-three .list {
+	width: 1.8rem;
+	margin-left:.73rem;
+}
+.mod-book-three .list:nth-child(3n+1){
+	margin-left:0;
+}
+
+.mod-book-three  .list>div{
+    flex-direction: column;
+} 
+.mod-book-three .mod-book-img{
+    width:1.8rem;
+    height: 2.4rem;
+    margin-right: 0;
+}
+.mod-book-three .mod-book-img img{
+    width:1.8rem;
+}
+.mod-book-three .mod-book-detail .mod-book-title{
+    margin: .24rem 0 0 0;
+    width:1.8rem;
+    font-size: .28rem;
+    text-align: center;
+}
+
+
+
+
+

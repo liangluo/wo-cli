@@ -16,6 +16,12 @@ nav,section,article,aside,footer,figure,figcaption,menu {
 h1,h2,h3,h4,h5,h6 {
   font-weight: normal;
 }
+html,
+body {
+  background: #fff;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;//允许独立的滚动区域和触摸回弹
+}
 body {
   font-family: "Noto SansCJK", Roboto, "Droid Sans", "Droid Sans Fallback", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
   line-height: 24px;
@@ -51,19 +57,89 @@ a,input {
 header,nav,section,article,footer,figure,figcaption {
   display: block;
 }
-
-.ui-clearfix:after {
+.clearfix:after {
   content: ".";
   display: block;
   height: 0;
   clear: both;
   overflow: hidden;
 }
-.ui-hidden {
+.hidden {
   display: none !important;
 }
-.ui-ellipsis {
+.ellipsis {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.one-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.two-text {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.thr-text {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+.flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+.row {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
+.column {
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.f-center {
+    -webkit-box-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.f-between {
+    -webkit-box-pack: space-between;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.f-around {
+    -webkit-box-pack: space-around;
+    -moz-justify-content: space-around;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+}
+
+.f-align {
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+

@@ -3,7 +3,7 @@ const _ = require('lodash')
 const fs = require('fs')
 const path = require('path')
 const colors = require('colors')
-const { copyDir, fsExistsSync, funMkdirSync } = require('./util')
+const { copyDir, fsExistsSync, funMkdirSync } = require('../lib/util')
 
 module.exports = option => {
   let config = _.assign({

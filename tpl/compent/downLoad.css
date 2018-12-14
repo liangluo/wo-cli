@@ -1,0 +1,67 @@
+.downFloat {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1.14rem;
+    background: #1B0336;
+    z-index: 999;
+    padding: 0 .32rem;
+    box-sizing: border-box;
+}
+
+.downFloat .warp {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 1.14rem;
+    position: relative;
+}
+
+.downFloat .warp .close {
+    width: .4rem;
+    height: .4rem;
+    margin-right: .3rem;
+}
+
+.downFloat .warp .logo {
+    width: .7rem;
+    height: .7rem;
+    margin-right: .3rem;
+}
+
+.downFloat .warp .tagline {
+    width: auto;
+    height: .8rem;
+    color: #fff;
+}
+
+.downFloat .warp .tagline .headline {
+    font-size: .32rem;
+
+}
+
+.downFloat .warp .tagline .subHeadline {
+    font-size: .24rem;
+    color: #999;
+    line-height: 1;
+}
+
+.downFloat .warp .downBtn {
+    position: absolute;
+    right: 0;
+    top: .29rem;
+    width: 1.6rem;
+    font-size: .28rem;
+    height: .56rem;
+    line-height: .56rem;
+    background: rgb(225, 62, 51);
+    background: -moz-linear-gradient(left, rgba(225, 62, 51, 1) 0%, rgba(249, 105, 95, 1) 100%);
+    background: -webkit-linear-gradient(left, rgba(225, 62, 51, 1) 0%, rgba(249, 105, 95, 1) 100%);
+    background: linear-gradient(to right, rgba(225, 62, 51, 1) 0%, rgba(249, 105, 95, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e13e33', endColorstr='#f9695f', GradientType=1);
+    border-radius: .56rem;
+    color: #fff;
+    text-align: center;
+}

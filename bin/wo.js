@@ -16,7 +16,7 @@ if (!process.argv.slice(2).length) {
 }
 // 创建项目
 program
-  .command('create')
+  .command('init')
   .alias('c')
   .description('初始化项目')
   .option('-n, --name [name]', '项目英文名称')
@@ -28,7 +28,7 @@ program
     console.info('  Examples:')
     console.info('')
     console.info('$ wo init --name [name]')
-    console.info('$ wo i -n [name]')
+    console.info('$ wo in -n [name]')
   })
 
 program.parse(process.argv)

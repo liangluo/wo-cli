@@ -1,9 +1,9 @@
 
 {
     "name": "wo-cli",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "运营活动构建工具",
-    "main": "index.js",
+    "main": "wo.js",
     "bin": {
       "wo": "./bin/wo.js"
     },
