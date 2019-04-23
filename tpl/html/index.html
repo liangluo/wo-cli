@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no" />
@@ -8,15 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <title>首页</title>
+    <title>活动页示例</title>
     <!-- 引入样式 -->
     <link rel="stylesheet" href="../css/mint.css">
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" /> 
     <script src="../js/adaptive.js"></script>
     <script src="../js/vue.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/axios.min.js"></script>
     <!-- 引入组件库 -->
     <script src="../js/mint.js"></script>
-    <script src="../js/axios.min.js"></script>
     <script src="../js/compent.js"></script>
     <script type="text/javascript">
         window['adaptive'].desinWidth = 750; // 设计图宽度
@@ -28,15 +28,21 @@
 </head>
 
 <body ontouchstart="">
-    <div id="app">
+    <div id="app" >
         <div class="mod-subject">
             <img src="https://placehold.it/750x384" />
+            <button class="login-btn" @click="loginDialog" v-if="phone==null" >登录</button>
+            <span v-else class="login-phone">{{phone}}</span>
+            <button class="share-btn" @click="shareDialog">分享</button>
         </div>
         <toptitle  :titles="a"></toptitle>
         <book  :Model="1" :book-list="bookdata"></book>
         <toptitle  :titles="b"></toptitle>
         <book  :Model="3" :book-list="bookdata"></book>
+        
         <download></download>
+        <login :login-show="loginShow" @update="hideLogin" @islogin="isLogin"></login>
+        <share :share-show="shareShow" @update="hideShare"></share>
     </div>
     <script src="../js/main.js"></script>
 </body>

@@ -2,7 +2,7 @@
 var _html =`<div class="mod-book">
                 <div class="mod-book-one" v-if="Model==1">
                     <div class="list" v-for="(bookItem,index) in  bookList" :key="index">
-                        <div @click="openPage()">
+                        <div @click="openPage(bookItem.cntindex)">
                             <div class="mod-book-img">
                                 <img :src="bookItem.coveroneUrl" />
                                 <span class="icon-label">免费</span>
@@ -31,7 +31,7 @@ var _html =`<div class="mod-book">
                                 <img :src="bookItem.coveroneUrl"  />
                             </div>
                             <div class="mod-book-detail">
-                                <h2 class="mod-book-title  one-text">{{bookItem.cntname}}</h2>
+                                <h2 class="mod-book-title  two-text">{{bookItem.cntname}}</h2>
                             </div>
                         </div>
                     </div>
@@ -78,5 +78,10 @@ var book =Vue.component('book', {
     ]
         }
     },
-    template:_html
+    template:_html,
+    methods: {
+        openPage: function (cntindex) {
+            window.location.href='http://m.iread.wo.cn/contentdetail/getContentDetail.action?cntindex='+439425+'&channelid=18000000';
+        }
+    }
 })

@@ -13,7 +13,7 @@ const colors = require('colors')
 const config = {
   sprite: { // 雪碧图配置
     padding: 6, // 雪碧图中图片之间的间隙
-    ratio: {{screenRatio}}  // 几倍图
+    ratio: 2  // 几倍图
   },
   imageMinCheck: false, // 检查图片是否压缩了
   imageMinify: {  // 图片压缩配置
@@ -95,7 +95,12 @@ gulp.task('cp_js', (done) => {
     .pipe(gulp.dest('./publish/js'))
 })
 
-gulp.task('publish', ['cp_html', 'cp_img', 'cp_js'], () => {
+gulp.task('cp_compent', (done) => {
+    return gulp.src(['./compent/*'])
+      .pipe(gulp.dest('./publish/compent'))
+  })
+
+gulp.task('publish', ['cp_html', 'cp_img', 'cp_js','cp_compent'], () => {
   if (config.imageMinCheck) {
     if (fsExistsSync('./generate_sprite/new')) {
       funMkdirSync('./generate_sprite/min')

@@ -7,6 +7,7 @@
 ```shell
 npm install -g wo-cli
 ```
+如果已经安装过，请更新wo-cli包
 
 ## 配置
 
@@ -14,6 +15,14 @@ npm install -g wo-cli
 ```shell
 npm install -g node-sass
 ```
+## 更新wo-cli包
+
+为了保证wo-cli的最新版本，全局卸载wo-cli,然后在安装
+```shell
+npm uninstall -g wo-cli
+npm install -g wo-cli
+```
+
 
 ## 使用
 
@@ -28,6 +37,11 @@ wo init
   -n, --name [name]         项目名
   -t, --type [type]         项目类型：vue(默认) 
 ```
+根据提示输入项目名称、设计稿倍数、开发者名称，即初始化项目完成;
+
+
+### 安装依赖
+npm install
 
 创建完毕项目后，进入项目跟目录`npm install`安装依赖，即可开始开发
 

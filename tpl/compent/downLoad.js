@@ -14,20 +14,16 @@ loadJs('downApp')
 var download = Vue.component('download', {
     data: function () {
         return {
-
+            downLoadShow:!!getStorage("downLoadShow")?getStorage("downLoadShow"):true,
         }
     },
     props: {
-        downLoadShow:{
-            type:Boolean,
-            default:true
-        }
     },
     template: _html,
     methods: {
         closeDown: function () {
-            this.trumpetShow=getStorage("trumpetShow");
-            setStorage("trumpetShow",false,60000); //一分钟后改变设e置
+            this.downLoadShow=false;
+            setStorage("downLoadShow",false,60000); //一分钟后改变设e置
         },
         downApp:function(){
             openworeader();

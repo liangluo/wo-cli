@@ -1,7 +1,7 @@
 {
-  "name": "{{name}}",
+  "name": "npm",
   "version": "1.0.0",
-  "description": "{{name}}",
+  "description": "npm",
   "main": "gulpfile.js",
   "scripts": {
     "sass": "node sass.js",
@@ -20,5 +20,5 @@
     "gulp-util": "^3.0.8",
     "postcss-sprites": "^4.2.0"
   },
-  "author": "{{author}}"
+  "author": "liangluo"
 }

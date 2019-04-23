@@ -1,9 +1,9 @@
 //引入组件
 loadScript("book"); //书籍模式
 loadScript("title"); //标题模式
-loadScript("downLoad"); //标题模式
-
-
+loadScript("downLoad"); //down模式
+loadScript("login"); //登录
+loadScript("share"); //分享
 
 
 
@@ -46,7 +46,7 @@ function addCookie(key, value, expiresTime) {
 function setStorage(key, value, duration) {
     var data = {
         value: value,
-        expiryTime: !duration || isNaN(duration) ? 0 : this.getCurrentTimeStamp() + parseInt(duration)
+        expiryTime: !duration || isNaN(duration) ? 0 : getCurrentTimeStamp() + parseInt(duration)
     };
     localStorage[key] = JSON.stringify(data);
 }
@@ -56,7 +56,7 @@ function getStorage(key) {
     if (!data || data === "null") {
         return null;
     }
-    var now = this.getCurrentTimeStamp();
+    var now = getCurrentTimeStamp();
     var obj;
     try {
         obj = JSON.parse(data);
@@ -71,4 +71,8 @@ function getStorage(key) {
 
 function removeStorage(key) {
     localStorage.removeItem(key);
+}
+
+function getCurrentTimeStamp() {
+    return Date.parse(new Date());
 }
